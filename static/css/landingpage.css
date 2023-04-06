@@ -1,0 +1,79 @@
+/* Set background image */
+
+header {
+    background-size: cover;
+    height: 100vh;
+  }
+  .jumbotron {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  }
+  
+  /* Style header content */
+  .header-content {
+    color: #fff;
+    text-align: center;
+    margin-top: 150px;
+  }
+  
+  .header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Style about section */
+  .about-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+  }
+  
+  .about-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+  }
+  
+  .about-section p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+  }
+  
+  /* Style button */
+  .btn-landing {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-landing:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+  }
+  
+  /* Style footer */
+  footer {
+    background-color: #fff;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  footer p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    position: fixed;
+    
+  }
+  
