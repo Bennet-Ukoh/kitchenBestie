@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Recipe Search</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+   <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">KitchenBestie</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Favorites</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="search" placeholder="Search for a recipe">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" onclick="getrecipe(document.getElementById('search').value)">Search</button>
+                    </div>
+                </div>
+                <div id="output"></div>
+                <a href="" id="sourceLink"></a>
+            </div>
+        </div>
+    </div>
+
     <script>
         function getsource(id){
             $.ajax({
@@ -22,17 +68,12 @@
                 url:"/search?q="+q,
                 success: function(res){
                     var result = res.results[0];
-                    var output = "<h1>"+result.title+"</h1><br><img src='"+result.image+"' width='400'/><br>ready in "+result.readyInMinutes+" minutes";
+                    var output = "<h1>"+result.title+"</h1><br><img src='"+res.baseUri+result.image+"' class='img-fluid' /><br>ready in "+result.readyInMinutes+" minutes";
                     document.getElementById('output').innerHTML = output;
                     getsource(result.id);
                 }
-            });
+            }); 
         }
     </script>
-</head>
-<body>
-    <input type="text" id="search"><button onclick="getrecipe(document.getElementById('search').value)">Search</button>
-    <div id="output"></div>
-    <a href="" id="sourceLink"></a>
 </body>
 </html>
