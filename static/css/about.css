@@ -1,0 +1,44 @@
+/* About page styling */
+.container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .jumbotron {
+    background-image: url('https://picsum.photos/id/237/2000/1000');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px;
+    margin-bottom: 0;
+  }
+  
+  .jumbotron h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .jumbotron p {
+    font-size: 1.5rem;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  
+  .row {
+    padding: 100px 0;
+  }
+  
+  .col-md-6 {
+    padding: 20px;
+  }
+  
+  .col-md-6 h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .col-md-6 p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  

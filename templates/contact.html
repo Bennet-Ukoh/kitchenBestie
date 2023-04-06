@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+
+{%block css%}
+<link rel="stylesheet" href="../static/css/contact.css">
+{%endblock css%}
+
+{%block content%}
+<div class="container-fluid">
+  <div class="jumbotron jumbotron-fluid bg-light">
+    <div class="container">
+      <h1 class="display-4">Contact Us</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="nameInput">Name</label>
+          <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="emailInput">Email address</label>
+          <input type="email" class="form-control" id="emailInput" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="messageTextarea">Message</label>
+          <textarea class="form-control" id="messageTextarea" rows="5" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h2>Contact Information</h2>
+      <p><strong>Phone:</strong> +233 7036960178</p>
+      <p><strong>Email:</strong> info@yourwebsite.com</p>
+    </div>
+  </div>
+</div>
+{%endblock content%}

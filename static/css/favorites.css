@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 30%;
+  }
+
+  .card img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card h3 {
+    margin: 10px 0;
+  }
+
+  /* Media queries */
+  @media screen and (max-width: 768px) {
+    .container {
+      justify-content: center;
+    }
+
+    .card {
+      width: 45%;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .card {
+      width: 100%;
+    }
+  }
